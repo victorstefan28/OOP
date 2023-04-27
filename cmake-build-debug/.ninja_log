@@ -1,0 +1,10 @@
+# ninja log v5
+6	1758	7043370649659702	CMakeFiles/Clion_proj.dir/main.cpp.obj	287bdc2f8435a1dc
+2373	2677	7043378184370780	Clion_proj.exe	8fe06e74304ea9ce
+1	321	7043388159253759	build.ninja	13efff16ef3c0d1e
+16	1040	7043009082325679	CMakeFiles/Clion_proj.dir/source_files/mark.cpp.obj	98f06e54b613caa2
+18	1121	7043349690540387	CMakeFiles/Clion_proj.dir/source_files/Grade.cpp.obj	9cf5635d45e3321a
+37	239	7042008077226957	CMakeFiles/Clion_proj.dir/source_files/Student.cpp.obj	4e4772863d860201
+7	2372	7043378181361406	CMakeFiles/Clion_proj.dir/source_files/Menu.cpp.obj	2e18b152f2614462
+28	1820	7043370650296830	CMakeFiles/Clion_proj.dir/source_files/Absence.cpp.obj	389e326527a1abeb
+18	1887	7043370650874367	CMakeFiles/Clion_proj.dir/source_files/Exception.cpp.obj	8250bfbe356edb92

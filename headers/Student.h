@@ -18,7 +18,7 @@ class Student
 public:
     Student();
 
-    Student(std::string name_, std::string clasa_);
+    Student(const std::string& name_, const std::string& clasa_);
     Student(const Student& o);
     ~Student();
     int GetActiv() const;
@@ -26,11 +26,11 @@ public:
 
     [[nodiscard]] std::string GetName() const;
     [[nodiscard]] std::string GetClasa() const;
-    void SetName(std::string name_);
-    void SetClasa(std::string clasa_);
-    void add_grade(const Grade obj_grade);
-    void add_grade(int value, std::string discipline, std::string date);
-    void add_absenta(const Absence o_abs);
+    void SetName(const std::string& name_);
+    void SetClasa(const std::string& clasa_);
+    void add_grade(const Grade& obj_grade);
+    void add_grade(int value, const std::string& discipline, const std::string& date);
+    void add_absenta(const Absence& o_abs);
     std::vector<std::shared_ptr<Mark>>& GetMarks();
     void afis(std::ostream& os) const;
     friend std::ostream& operator<<(std::ostream& os, const Student& rhs);

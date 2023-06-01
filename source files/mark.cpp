@@ -3,10 +3,9 @@
 //
 
 #include "../headers/mark.h"
-Mark::Mark()
+Mark::Mark() : date(""), discipline("")
 {
-    date = "";
-    discipline = "";
+
 }
 Mark::Mark(const Mark &o)
 {
@@ -24,7 +23,7 @@ Mark::Mark(const Mark &o)
     SetDiscipline( o.GetDiscipline());
 }
 
-void Mark::SetDate(std::string data_)
+void Mark::SetDate(const std::string& data_)
 {
     date = data_;
 }
@@ -56,27 +55,26 @@ std::ostream& operator<<(std::ostream& os, const Mark &rhs)
 
 std::istream& operator>>(std::istream& is, Mark &rhs)
 {
-    //set todays date todo
+
     is>>rhs.discipline;
     return is;
 }
-void Mark::SetDiscipline(std::string disc)
+void Mark::SetDiscipline(const std::string& disc)
 {
     discipline = disc;
 }
 std::string Mark::GetDiscipline() const
 {
     return discipline;
-};
+}
 
 Mark::~Mark() = default;
 
-Mark::Mark(std::string date_, std::string discipline_) {
-    SetDate(date_);
-    SetDiscipline(discipline_);
+Mark::Mark(std::string date_, std::string discipline_) : date(date_), discipline(discipline_) {
+
 }
 
-Mark::Mark(std::string discipline_)
+Mark::Mark(std::string discipline_) : discipline(discipline_)
 {
-    SetDiscipline(discipline_);
+
 }

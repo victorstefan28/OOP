@@ -10,19 +10,19 @@ class Absence : public Mark {
     std::string tip;
 public:
     Absence();
-    Absence(std::string tip_, std::string discipline_, std::string date_);
-    Absence(std::string tip_, std::string discipline_);
+    Absence(const std::string& tip_, const std::string& discipline_, const std::string& date_);
+    Absence(const std::string& tip_, const std::string& discipline_);
     Absence& operator=(const Absence &rhs);
 
-    Absence(const Absence& o) : Mark(o)
+    Absence(const Absence& o) : Mark(o), tip(o.GetTip())
     {
-        tip = o.GetTip();
+
     }
     std::string GetTip() const
     {
         return tip;
     }
-    virtual void afiseaza(std::ostream& os) const
+    virtual void afiseaza(std::ostream& os) const override
     {
         os<<"Absenta "<<tip<<" la "<<GetDiscipline()<<" pe data de "<<GetDate()<<'\n';
     }
